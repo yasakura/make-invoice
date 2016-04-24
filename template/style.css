@@ -1,0 +1,218 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: .67em 0;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #383839;
+  font-family: Arial,Helvetica,"Liberation Sans",FreeSans,sans-serif;
+  line-height: 1.5;
+}
+
+p,
+td,
+th,
+ul {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: 0 0 1.45em;
+}
+
+.h1Like,
+h1 {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+
+h1:first-child {
+  margin-top: 0;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+p:last-child,
+table:last-child {
+  margin-bottom: 0;
+}
+
+.smaller {
+  font-size: 8px;
+  font-size: 0.8rem;
+}
+
+.small {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.big {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.col {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.inbl {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.txtRight {
+  text-align: right;
+}
+
+.mt1 {
+  margin-top: 1em;
+}
+
+.mt2 {
+  margin-top: 2em;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.pt1 {
+  padding-top: 1em;
+}
+
+.pt2 {
+  padding-top: 2em;
+}
+
+.pl0 {
+  padding-left: 0;
+}
+
+.w20 {
+  width: 20%;
+}
+
+.w25 {
+  width: 25%;
+}
+
+.w30 {
+  width: 30%;
+}
+
+.w40 {
+  width: 40%;
+}
+
+.w60 {
+  width: 60%;
+}
+
+.w70 {
+  width: 70%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+@page {
+  margin: 0;
+  size: A4;
+}
+
+.wrapper {
+  margin: 20mm 15mm 20mm 15mm;
+}
+
+.flexbox {
+  display: flex;
+  min-height: 86vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.color1 {
+  color: #b9b8b8;
+}
+
+.borderTopColor1 {
+  border-top: solid 2px #b9b8b8;
+}
+
+.borderTopColor2 {
+  border-top: solid 2px black;
+}
+
+.borderRib {
+  border: solid 1px black;
+}
+
+thead {
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  text-align: left;
+}
+
+tbody {
+  vertical-align: top;
+}
+
+td {
+  padding: 2px 0;
+}
+
+li {
+  list-style: none;
+}
+
