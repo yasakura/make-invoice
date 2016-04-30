@@ -1,0 +1,11 @@
+{
+  "name": "invoice-generator",
+  "version": "0.1.0",
+  "author": "Lionel JAMAL (https://github.com/yasakura)",
+  "license": "MIT",
+  "repository": "https://github.com/yasakura/invoice-generator",
+  "dependencies": {
+    "fs": "0.0.2",
+    "handlebars": "^4.0.5"
+  }
+}
