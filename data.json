@@ -1,0 +1,48 @@
+{
+  "date": "01/01/1984",
+  "invoice_number": "XXXXXX",
+  "invoice_object": "Fusce sapien neque",
+  "my_company": {
+    "name": "Lorem Ipsum",
+    "adress": "1 rue de la mairie, 12345 Lorem",
+    "phone_number": "+33 (0)1 02 03 04 05",
+    "email": "lorem@ipsum.com",
+    "siren": "001 002 003",
+    "bank": {
+      "name":  "Vestibulum orci sapien",
+      "iban":  "XX01 0001 0002 0003 0004 0005 006",
+      "bic" : "XXXXXXXX"
+    }
+  },
+  "customer": {
+    "name": "Lorem",
+    "adress" : "2 rue de la cité, 12345 Lorem",
+    "siren": "123 456 789",
+    "tva_intra" : "FR01 123456789"
+  },
+  "item": [
+    {
+      "amount": 1,
+      "description": [
+        { "item": "Vestibulum orci sapien" },
+        { "item": "justo id dignissim varius" }
+      ],
+      "unit_price": "0.00",
+      "sum": "0.00"
+    },
+    {
+      "amount": 2,
+      "description": [
+        { "item": "Vestibulum orci sapien" }
+      ],
+      "unit_price": "0.00",
+      "sum": "0.00"
+    }
+  ],
+  "total": "0.00",
+  "limit_date_paiement": "30 jours à réception de facture",
+  "paiement_mode": [
+    { "kind": "- si nécessaire, par chèque à l'ordre de Lorem Ipsum" },
+    { "kind": "- de préférence, par virement sur le compte bancaire suivant :" }
+  ]
+}

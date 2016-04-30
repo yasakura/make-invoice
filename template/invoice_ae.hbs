@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="flexbox">
+      <div class="content">
+        <div class="inbl w70">
+            <h1>{{my_company.name}}</h1>
+            <p>
+              {{my_company.adress}}<br>
+              Tel : {{my_company.phone_number}}<br>
+              E-mail : {{my_company.email}}
+            </p>
+        </div><!-- @whitespace
+    --><div class="inbl txtRight w30">
+          <p class="color1 h1Like">FACTURE</p>
+        </div>
+
+        <p class="mt1">Objet : {{invoice_object}}</p>
+
+        <div class="borderTopColor1 inbl mt1 pt1 w70">
+          <p class="bold mb0">Adressée à :</p>
+          <p>
+            {{customer.name}}<br>
+            {{customer.adress}}<br>
+            SIREN : {{customer.siren}}<br>
+            N° de TVA Intra : {{customer.tva_intra}}
+          </p>
+        </div><!-- @whitespace
+      --><div class="borderTopColor1 inbl mt1 pt1 w30">
+          <div class="row">
+            <div class="col">
+              <p class="bold txtRight">Facture n° :</p>
+            </div>
+            <div class="col txtRight">
+              <p class="bold">{{invoice_number}}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col txtRight">
+              <p>Date :</p>
+            </div>
+            <div class="col txtRight">
+              <p>{{date}}</p>
+            </div>
+          </div>
+        </div>
+
+        <table class="mt2 w100">
+          <thead>
+            <tr>
+              <th class="w20">Quantité</th>
+              <th class="w30">Description</th>
+              <th class="txtRight w25">Tarif unitaire</th>
+              <th class="txtRight w25">Montant H.T.</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {{#each item}}
+              <tr>
+                <td>{{amount}}</td>
+                <td>
+                  {{#each description}}
+                    {{item}}<br/>
+                  {{/each}}
+                </td>
+                <td class="txtRight">{{unit_price}} €</td>
+                <td class="txtRight">{{sum}} €</td>
+              </tr>
+            {{/each}}
+
+            <tr>
+              <td class="pt2 txtRight" colspan="3">Sous-total H.T.</td>
+              <td class="pt2 txtRight">{{total}} €</td>
+            </tr>
+
+            <tr>
+              <td class="txtRight" colspan="3">TVA non applicable, art. 293 B du CGI</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td class="big bold txtRight" colspan="3">Total H.T. à payer</td>
+              <td class="big bold txtRight">{{total}} €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="borderTopColor2 pt1 terms">
+        <div class="item">
+          <p class="inbl mb0 small txtRight w40">Date limite de paiement :&nbsp;</p><!-- @whitespace
+       --><p class="inbl mb0 small w60">{{limit_date_paiement}}</p>
+
+          <p class="inbl small txtRight w40">Mode de paiement :&nbsp; </p><!-- @whitespace
+       --><ul class="inbl pl0 small w60">
+            {{#each paiement_mode}}
+              <li>{{kind}}</li>
+            {{/each}}
+          </ul>
+
+          <div class="borderRib">
+            <div class="row">
+              <p class="col small txtRight w40">Banque :&nbsp;</p>
+              <p class="col small w60">{{my_company.bank.name}}</p>
+            </div>
+            <div class="row">
+              <p class="col small txtRight w40">IBAN :&nbsp;</p>
+              <p class="col small w60">{{my_company.bank.iban}}</p>
+            </div>
+            <div class="row">
+              <p class="col small txtRight w40">BIC :&nbsp;</p>
+              <p class="col small w60">{{my_company.bank.bic}}</p>
+            </div>
+          </div>
+
+          <p class="mt2 smaller">Aucun escompte pour règlement anticipé. <br>
+          En application de la loi n°92-1442 du 31.12.1992, les factures sont payables à l'échéance indiquée. <br>
+          Tout règlement effectué après expiration de ce délai donnera lieu, à titre de pénalité de retard, à l’application d’un intérêt égal à celui appliqué par la Banque Centrale Européenne à son opération de refinancement la plus récente, majoré de 10 points de pourcentage, ainsi qu'une indemnité forfaitaire de 40 € pour frais de recouvrement.</p>
+
+          <p class="smaller">Dispensé d’immatriculation au Registre du Commerce et des Sociétés et au répertoire des métiers - SIREN : {{my_company.siren}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+  </script>
+</body>
+</html>
