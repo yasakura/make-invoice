@@ -23,6 +23,3 @@
     return outputString;
   }
 })();
-
-
-// faire package.json pour installer dependances lors du clone du dépot avec npm i
