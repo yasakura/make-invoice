@@ -1,7 +1,9 @@
 'use strict';
 
 (function(){
-  var handlebars = require('handlebars')
+  var args = process.argv.slice(2)
+    , pathJson = args[0] || './data.json'
+    , handlebars = require('handlebars')
     , fs = require('fs');
 
   fs.readFile('./template/invoice_ae.hbs', 'utf8', function(err, data) {
@@ -16,7 +18,7 @@
   }
 
   function compileHandlebars(data) {
-    var json = require('./data.json')
+    var json = require(pathJson)
       , template = handlebars.compile(data.toString())
       , outputString = template(json);
 
