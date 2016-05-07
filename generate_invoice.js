@@ -35,7 +35,10 @@
   ];
 
   childProcess.execFile(binPath, childArgs, function() {
-    fs.rename('./invoice.pdf', nameInvoice);
+    fs.rename('./invoice.pdf', nameInvoice, function(err) {
+      if (err) throw err;
+      fs.unlink('./template/invoice.html');
+    });
     console.log('Facture généré : '+nameInvoice);
   });
 })();
