@@ -22,18 +22,18 @@
   },
   "item": [
     {
-      "amount": 1,
       "description": [
         { "item": "Vestibulum orci sapien" },
         { "item": "justo id dignissim varius" }
       ],
+      "amount": 1,
       "unit_price": "0.00",
     },
     {
-      "amount": 2,
       "description": [
         { "item": "Vestibulum orci sapien" }
       ],
+      "amount": 2,
       "unit_price": "0.00",
     }
   ],
