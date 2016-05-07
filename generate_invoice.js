@@ -39,6 +39,6 @@
       if (err) throw err;
       fs.unlink('./template/invoice.html');
     });
-    console.log('Facture généré : '+nameInvoice);
+    console.log('Generated invoice : '+nameInvoice);
   });
 })();
