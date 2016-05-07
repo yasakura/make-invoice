@@ -2,7 +2,7 @@
 
 (function(){
   var argv = require('yargs').argv
-    , pathJson = argv.json || './data.json'
+    , pathJson = argv.json || './data_example.json'
     , nameInvoice = argv.name || './invoice.pdf'
     , handlebars = require('handlebars')
     , fs = require('fs')
