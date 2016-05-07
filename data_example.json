@@ -27,14 +27,14 @@
         { "item": "justo id dignissim varius" }
       ],
       "amount": 1,
-      "unit_price": "0.00",
+      "unit_price": "0.00"
     },
     {
       "description": [
         { "item": "Vestibulum orci sapien" }
       ],
       "amount": 2,
-      "unit_price": "0.00",
+      "unit_price": "0.00"
     }
   ],
   "limit_date_paiement": "30 jours à réception de facture",
