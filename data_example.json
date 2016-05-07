@@ -28,7 +28,6 @@
         { "item": "justo id dignissim varius" }
       ],
       "unit_price": "0.00",
-      "sum": "0.00"
     },
     {
       "amount": 2,
@@ -36,10 +35,8 @@
         { "item": "Vestibulum orci sapien" }
       ],
       "unit_price": "0.00",
-      "sum": "0.00"
     }
   ],
-  "total": "0.00",
   "limit_date_paiement": "30 jours à réception de facture",
   "paiement_mode": [
     { "kind": "- si nécessaire, par chèque à l'ordre de Lorem Ipsum" },
