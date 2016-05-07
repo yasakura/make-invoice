@@ -6,6 +6,9 @@
   "repository": "https://github.com/yasakura/invoice-generator",
   "dependencies": {
     "fs": "0.0.2",
-    "handlebars": "^4.0.5"
+    "handlebars": "^4.0.5",
+    "path": "^0.12.7",
+    "phantomjs-prebuilt": "^2.1.7",
+    "yargs": "^4.7.0"
   }
 }
