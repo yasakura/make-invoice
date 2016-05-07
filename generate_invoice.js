@@ -24,10 +24,29 @@
 
   function compileHandlebars(data) {
     var json = require(pathJson)
+      , jsonWithSums = calculatingAmounts(json)
       , template = handlebars.compile(data.toString())
-      , outputString = template(json);
+      , outputString = template(jsonWithSums);
 
     return outputString;
+  }
+
+  function calculatingAmounts(json) {
+    var sum = 0;
+
+    json.item.forEach(function(element) {
+      var process = Number.parseFloat(element.amount) * Number.parseFloat(element.unit_price);
+      element.sum = numberWithSpace(process);
+      sum = sum + process;
+    });
+
+    json.total = numberWithSpace(sum);
+
+    return json;
+  }
+
+  function numberWithSpace(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   }
 
   var childArgs = [
