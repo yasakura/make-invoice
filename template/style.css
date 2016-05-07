@@ -168,18 +168,25 @@ table:last-child {
   size: A4;
 }
 
-.wrapper {
-  margin: 20mm 15mm 20mm 15mm;
-}
+html,
+body,
+.wrapper { height: 100%; }
 
-.flexbox {
+.wrapper {
+  padding: 20mm 15mm 20mm 15mm;
   display: flex;
-  min-height: 86vh;
+  display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
 }
 
 .content {
   flex: 1;
+  -webkit-flex: 1;
+}
+
+.terms {
+  -webkit-order: 0;
 }
 
 .color1 {
