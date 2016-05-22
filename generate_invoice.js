@@ -35,18 +35,24 @@
     var sum = 0;
 
     json.item.forEach(function(element) {
-      var process = Number.parseFloat(element.amount) * Number.parseFloat(element.unit_price);
-      element.sum = numberWithSpace(process);
+      var process = Number.parseFloat(element.amount) * Number.parseFloat(element.unit_price)
+        , processFormat = convertFormat(process);
+
+      element.sum = deleteCurrency(processFormat);
+
       sum = sum + process;
     });
 
-    json.total = numberWithSpace(sum);
-
+    json.total = deleteCurrency(convertFormat(sum));
     return json;
   }
 
-  function numberWithSpace(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  function convertFormat(argv) {
+    return new Intl.NumberFormat('fr', { style: 'currency', currency: 'EUR' }).format(argv);
+  }
+
+  function deleteCurrency(x) {
+    return x.toString().replace('€', '');
   }
 
   var childArgs = [
