@@ -136,6 +136,10 @@ table:last-child {
   padding-left: 0;
 }
 
+.w10 {
+  width: 10%;
+}
+
 .w20 {
   width: 20%;
 }
@@ -148,8 +152,8 @@ table:last-child {
   width: 30%;
 }
 
-.w40 {
-  width: 40%;
+.w50 {
+  width: 50%;
 }
 
 .w60 {

@@ -54,23 +54,23 @@
       <table class="mt2 w100">
         <thead>
           <tr>
-            <th class="w20">Quantité</th>
-            <th class="w30">Description</th>
-            <th class="txtRight w25">Tarif unitaire</th>
-            <th class="txtRight w25">Montant H.T.</th>
+            <th class="w50">Description</th>
+            <th class="txtRight w20">Tarif unitaire</th>
+            <th class="txtRight w10">Qté</th>
+            <th class="txtRight w20">Montant H.T.</th>
           </tr>
         </thead>
 
         <tbody>
           {{#each item}}
             <tr>
-              <td>{{amount}}</td>
               <td>
                 {{#each description}}
                   {{item}}<br/>
                 {{/each}}
               </td>
               <td class="txtRight">{{unit_price}} €</td>
+              <td class="txtRight">{{amount}}</td>
               <td class="txtRight">{{sum}} €</td>
             </tr>
           {{/each}}
