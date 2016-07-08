@@ -11,6 +11,17 @@
     , phantomjs = require('phantomjs-prebuilt')
     , binPath = phantomjs.path;
 
+    var nodeStatic = require('node-static'),
+    http = require('http');
+
+    // serve
+    var server = http.createServer(function (request, response) {
+      request.addListener('end', function () {
+        file.serve(request, response);
+      }).resume();
+    });
+    var file = new nodeStatic.Server(__dirname + '/template');
+
   fs.readFile(__dirname + '/template/invoice_ae.hbs', 'utf8', function(err, data) {
     if (err) throw err;
     writeFile(data);
@@ -59,11 +70,14 @@
     path.join(__dirname, '/phantom.js')
   ];
 
+  server.listen(3978);
+
   childProcess.execFile(binPath, childArgs, function() {
     fs.rename('./invoice.pdf', nameInvoice, function(err) {
       if (err) throw err;
       fs.unlink(__dirname + '/template/invoice.html');
     });
-    console.log('Generated invoice : '+nameInvoice);
+    server.close();
+    console.log('Generated invoice : '+ process.cwd() + '/' + nameInvoice);
   });
 })();
