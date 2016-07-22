@@ -23,7 +23,6 @@ Vous pouvez passez à la commande deux options :
   --name  le nom et le chemin du PDF de sortie
   --json  l'emplacement d'un JSON à utiliser
 ```
-_Pour l'option --name, ne pas oublier l'extension .pdf après le nom du fichier voulu._
 
 ## Licence
 

@@ -1,9 +1,9 @@
 {
-  "name": "invoice-generator",
-  "version": "0.1.0",
+  "name": "make-invoice",
+  "version": "0.2.1",
   "author": "Lionel JAMAL (https://github.com/yasakura)",
   "license": "MIT",
-  "repository": "https://github.com/yasakura/invoice-generator",
+  "repository": "https://github.com/yasakura/make-invoice",
   "dependencies": {
     "fs": "0.0.2",
     "handlebars": "^4.0.5",
@@ -12,5 +12,7 @@
     "path": "^0.12.7",
     "phantomjs-prebuilt": "^2.1.7",
     "yargs": "^4.7.0"
-  }
+  },
+  "main": "./lib/make-invoice",
+  "bin": "./bin/make-invoice"
 }
