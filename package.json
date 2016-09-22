@@ -1,10 +1,11 @@
 {
   "name": "make-invoice",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": "Lionel JAMAL (https://github.com/yasakura)",
   "license": "MIT",
   "repository": "https://github.com/yasakura/make-invoice",
   "dependencies": {
+    "commander": "^2.9.0",
     "fs": "0.0.2",
     "handlebars": "^4.0.5",
     "http": "0.0.0",
