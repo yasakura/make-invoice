@@ -71,28 +71,28 @@
               </td>
               <td class="txtRight">{{unit_price}} €</td>
               <td class="txtRight">{{amount}}</td>
-              <td class="txtRight">{{sum}} €</td>
+              <td class="txtRight">{{sumWithoutTva}} €</td>
             </tr>
           {{/each}}
 
           <tr>
             <td class="pt2 txtRight" colspan="3">Sous-total H.T.</td>
-            <td class="pt2 txtRight">{{total}} €</td>
+            <td class="pt2 txtRight">{{totalWithoutTva}} €</td>
           </tr>
 
           <tr>
-            <td class="txtRight" colspan="3">TVA non applicable, art. 293 B du CGI</td>
-            <td></td>
+            <!-- <td class="txtRight" colspan="3">TVA non applicable, art. 293 B du CGI</td> -->
+            <td class="txtRight" colspan="3">{{tva.text}}</td>
+            <td class="txtRight">{{tva.sum}}</td>
           </tr>
 
           <tr>
-            <td class="big bold txtRight" colspan="3">Total H.T. à payer</td>
-            <td class="big bold txtRight">{{total}} €</td>
+            <td class="big bold txtRight" colspan="3">{{totalText}}</td>
+            <td class="big bold txtRight">{{totalWithTva}} €</td>
           </tr>
         </tbody>
       </table>
     </div>
-
 
     <div class="borderTopColor2 pt1 terms">
       <div class="item">
@@ -125,7 +125,7 @@
         En application de la loi n°92-1442 du 31.12.1992, les factures sont payables à l'échéance indiquée. <br>
         Tout règlement effectué après expiration de ce délai donnera lieu, à titre de pénalité de retard, à l’application d’un intérêt égal à celui appliqué par la Banque Centrale Européenne à son opération de refinancement la plus récente, majoré de 10 points de pourcentage, ainsi qu'une indemnité forfaitaire de 40 € pour frais de recouvrement.</p>
 
-        <p class="smaller">Dispensé d’immatriculation au Registre du Commerce et des Sociétés et au répertoire des métiers - SIREN : {{my_company.siren}}</p>
+        <p class="smaller">{{legal_information}} - SIREN : {{my_company.siren}}</p>
       </div>
     </div>
   </div>

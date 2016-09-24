@@ -14,6 +14,10 @@
       "bic" : "XXXXXXXX"
     }
   },
+  "tva": {
+    "active": "yes",
+    "rate": "21.30"
+  },
   "customer": {
     "name": "Lorem",
     "adress" : "2 rue de la cité, 12345 Lorem",
@@ -27,19 +31,20 @@
         { "item": "justo id dignissim varius" }
       ],
       "amount": 1,
-      "unit_price": "0.00"
+      "unit_price": "1.00"
     },
     {
       "description": [
         { "item": "Vestibulum orci sapien" }
       ],
       "amount": 2,
-      "unit_price": "0.00"
+      "unit_price": "2.00"
     }
   ],
   "limit_date_paiement": "30 jours à réception de facture",
   "paiement_mode": [
     { "kind": "- si nécessaire, par chèque à l'ordre de Lorem Ipsum" },
     { "kind": "- de préférence, par virement sur le compte bancaire suivant :" }
-  ]
+  ],
+  "legal_information": "Lorem, S.A.R.L. au capital social de XX € - RCS XXX - N° TVA intracommunautaire : FR 01 234 567 890"
 }

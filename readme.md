@@ -23,6 +23,10 @@ Exemple de la structure attendue :
       "bic" : "XXXXXXXX"
     }
   },
+  "tva": {
+    "active": "yes",
+    "rate": "21.30"
+  },
   "customer": {
     "name": "Lorem",
     "adress" : "2 rue de la cité, 12345 Lorem",
@@ -36,34 +40,42 @@ Exemple de la structure attendue :
         { "item": "justo id dignissim varius" }
       ],
       "amount": 1,
-      "unit_price": "0.00"
+      "unit_price": "1.00"
     },
     {
       "description": [
         { "item": "Vestibulum orci sapien" }
       ],
       "amount": 2,
-      "unit_price": "0.00"
+      "unit_price": "2.00"
     }
   ],
   "limit_date_paiement": "30 jours à réception de facture",
   "paiement_mode": [
     { "kind": "- si nécessaire, par chèque à l'ordre de Lorem Ipsum" },
     { "kind": "- de préférence, par virement sur le compte bancaire suivant :" }
-  ]
+  ],
+  "legal_information": "Lorem, S.A.R.L. au capital social de XX € - RCS XXX - N° TVA intracommunautaire : FR 01 234 567 890"
 }
+```
+
+Le script calcul automatiquement les montants totaux.
+
+## Installation du paquet
+```
+$ npm i -g make-invoice
 ```
 
 ## Créer une facture
 
-Une fois le paquet installé, lancer la commande suivante pour générer une facture :
+Une fois le paquet installé, lancez la commande suivante pour générer une facture :
 
 ```
 $ make-invoice
 ```
 
-Par défaut le fichier d'entrée est _data_example.json_ et le fichier de sortie _invoice.pdf_.
-Le fichier sera généré à dans le dossier où vous lancez la commande.
+Par défaut, le fichier d'entrée est un fichier avec des données de test et le fichier de sortie _invoice.pdf_.
+Le fichier sera généré à l'endroit d'où vous lancez la commande.
 
 ### Options
 
@@ -75,7 +87,33 @@ Vous pouvez passez à la commande deux options :
 
 ### Résultats
 
-![Screenshot de la facture](imgs/invoice.png)
+Quand on génère une facture, on peut la générer avec ou sans la TVA (par exemple pour les auto-entrepreneur). Ce réglage se change dans le fichier _.json_ lu par le script à cet endroit :
+``` json
+  "tva": {
+    "active": "",
+    "rate": "XX"
+  }
+```
+Les valeurs à mettre se situent au niveau de la clé ```active```. Si vous mettez comme valeur ```yes``` la TVA est automatiquement calculée, selon la valeur renseignée pour la clé ```rate```.
+
+#### Exemple
+
+Si vous renseignez l'objet ```tva``` de la manière suivante :
+``` json
+  "tva": {
+    "active": "yes",
+    "rate": "5"
+  }
+```
+Le script calculera une TVA de 5% et affichera donc les montants H.T., le montant de la TVA ainsi que la somme TTC.
+
+##### Aperçu d'une facture avec la TVA
+
+![Screenshot de la facture](imgs/invoice_with_tva.png)
+
+##### Aperçu d'une facture sans la TVA
+
+![Screenshot de la facture](imgs/invoice_without_tva.png)
 
 ## Licence MIT
 
