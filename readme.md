@@ -8,6 +8,7 @@ Exemple de la structure attendue :
 
 ``` json
 {
+  "type": "Facture",
   "date": "01/01/1984",
   "invoice_number": "XXXXXX",
   "invoice_object": "Fusce sapien neque",
