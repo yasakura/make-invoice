@@ -39,9 +39,37 @@ html {
   font-size: 62.5%;
 }
 
+@font-face {
+  font-family: 'open_sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/opensans-light.woff2') format('woff2'),
+       url('fonts/opensans-light.woff') format('woff'),
+       url('fonts/opensans-light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'open_sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/opensans-regular.woff2') format('woff2'),
+       url('fonts/opensans-regular.woff') format('woff'),
+       url('fonts/opensans-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'open_sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/opensans-semibold.woff2') format('woff2'),
+       url('fonts/opensans-semibold.woff') format('woff'),
+       url('fonts/opensans-semibold.ttf') format('truetype');
+}
+
 body {
   color: #383839;
-  font-family: Arial,Helvetica,"Liberation Sans",FreeSans,sans-serif;
+  font-family: open_sans, Arial,Helvetica,"Liberation Sans",FreeSans,sans-serif;
+  font-weight: 300;
   line-height: 1.5;
 }
 
@@ -106,8 +134,12 @@ table:last-child {
   vertical-align: top;
 }
 
+.semiBold {
+  font-weight: 400;
+}
+
 .bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .txtRight {
