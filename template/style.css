@@ -266,3 +266,7 @@ li {
   list-style: none;
 }
 
+.textTva {
+  max-width: 250px;
+  display: inline-block;
+}
