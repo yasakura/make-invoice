@@ -42,7 +42,7 @@
       "unit_price": "2.00"
     }
   ],
-  "limit_date_paiement": "30 jours à réception de facture",
+  "limit_date_paiement": "XX jours à réception de facture",
   "paiement_mode": [
     { "kind": "- si nécessaire, par chèque à l'ordre de Lorem Ipsum" },
     { "kind": "- de préférence, par virement sur le compte bancaire suivant :" }
