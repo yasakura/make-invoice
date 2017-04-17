@@ -233,7 +233,7 @@ body,
 }
 
 .color1 {
-  color: #b9b8b8;
+  color: #8a8a8a;
 }
 
 .borderTopColor1 {
@@ -241,11 +241,11 @@ body,
 }
 
 .borderTopColor2 {
-  border-top: solid 2px black;
+  border-top: solid 2px #333;
 }
 
 .borderRib {
-  border: solid 1px black;
+  border: solid 1px #333;
 }
 
 thead {
