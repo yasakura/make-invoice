@@ -26,7 +26,8 @@ Exemple de la structure attendue :
   },
   "tva": {
     "active": "yes",
-    "rate": "21.30"
+    "rate": "21.30",
+    "text": "T.V.A. 21.30 %"
   },
   "customer": {
     "name": "Lorem",
